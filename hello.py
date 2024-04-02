@@ -15,13 +15,10 @@ print("Connection established")
 
 cursor = conn.cursor()
 
-cursor.execute("SELECT * FROM customer;")
-rows = cursor.fetchall()
-
-# # Print all rows
-
-for row in rows:
-    print("Data row = (%s, %s)" %(str(row[0]), str(row[1])))
+cursor.execute("INSERT INTO customer (customer_name, customer_gender) VALUES (%s, %s);", ("alimert", 'male'))
+cursor.execute("INSERT INTO customer (customer_name, customer_gender) VALUES (%s, %s);", ("dendenn", 'male'))
+cursor.execute("INSERT INTO customer (customer_name, customer_gender) VALUES (%s, %s);", ("elif", 'female'))
+print("Inserted 3 rows of data")
 
 conn.commit()
 cursor.close()
