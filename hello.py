@@ -15,14 +15,6 @@ print("Connection established")
 
 cursor = conn.cursor()
 
-cursor.execute("INSERT INTO customer (customer_name, customer_gender) VALUES (%s, %s);", ("alimert", 'male'))
-cursor.execute("INSERT INTO customer (customer_name, customer_gender) VALUES (%s, %s);", ("dendenn", 'male'))
-cursor.execute("INSERT INTO customer (customer_name, customer_gender) VALUES (%s, %s);", ("elif", 'female'))
-print("Inserted 3 rows of data")
-
-conn.commit()
-cursor.close()
-conn.close()
 
 
 def main():
